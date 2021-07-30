@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GradientPicker</title>
+
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body > div{
+            padding: 0.6rem;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            width: 450px;
+        }
+
+        label{
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <label>Gradient</label>
+        <input id="picker" type="text" />
+    </div>
+
+    <script src="dist/gradient-picker.min.js"></script>
+    <script>
+        GradientPicker("#picker")
+    </script>
+</body>
+</html>
