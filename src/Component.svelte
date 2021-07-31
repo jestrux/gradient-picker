@@ -1,9 +1,19 @@
 <script>
+	import { onMount } from 'svelte';
 	export let el;
+	let mounted = false;
+
 	let colors = ["#5B24C2", "#7018A0"];
 
+	onMount(async () => {
+		if(el && el.value.length)
+			colors = el.value.split(",");
+
+		mounted = true;
+	});
+
 	$: {
-		el.value = colors.join(",");
+		if(mounted) el.value = colors.join(",");
 	}
 
 	const isColor = (strColor) => {
